@@ -6,11 +6,6 @@ import { RegisterUsersComponent } from './register-users/register-users.componen
 
 const routes: Routes = [
 {
-  path:'',
-  component: AppComponent,
-  pathMatch: 'full'
-},
-{
   path:'login',
   component: LoginComponent,
   pathMatch: 'full'

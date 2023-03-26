@@ -14,7 +14,7 @@ export class RegisterUserService {
   }
   public addUser(user: any) {
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    return this.http.post(`${this.baseUrl}/usuarios`, user, {headers: headers});
+    return this.http.post(`${this.baseUrl}/usuarios/`, user, {headers: headers});
   }
 
 }
