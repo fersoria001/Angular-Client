@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a *ngIf="!loginService.isUserLogged()" class="nav-link active" routerLink="/login"
+                    routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginService.isUserLogged()" class="nav-link active" routerLink="/register"
+                    routerLinkActive="active" ariaCurrentWhenActive="page">Register</a>
+            </li>
+
+            <li class="nav-item">
+
+                <a *ngIf="loginService.isUserLogged()" class="nav-link active" (click)="logout()"
+                    routerLinkActive="active" ariaCurrentWhenActive="page">Log out</a>
+            </li>
+            <li>
+                <button *ngIf="loginService.isUserLogged()"
+                    class="btn btn-secondary"> Hello {{loginService.getUser().name}}</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>

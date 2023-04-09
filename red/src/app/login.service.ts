@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
   baseUrl = 'http://localhost:8080'
+
+  public loginStatusSubject = new Subject<boolean>();
 
   constructor(private http: HttpClient) { }
 

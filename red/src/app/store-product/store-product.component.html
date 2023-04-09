@@ -1,0 +1,19 @@
+<form (ngSubmit)="formSubmit()">
+    <div class="form-group">
+        <label for="brand">Product brand</label>
+        <input [(ngModel)] = "product.brand" name="brand" type="text" class="form-control" id="brand" placeholder="Product brand">
+        <label for="model">Product model</label>
+        <input [(ngModel)] = "product.model" name="model" type="text" class="form-control" id="model" placeholder="Product model">      
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input [(ngModel)] = "product.description" name="description"
+         type="text" class="form-control" id="description" placeholder="Enter a description">
+    </div>
+    <div class="form-group">
+        <label for="stock">Stock</label>
+        <input [(ngModel)] = "product.stock" name="stock" type="number" class="form-control" id="stock" placeholder="Enter the actual stock">
+        <label for="price">Price</label>
+        <input [(ngModel)] = "product.price" name="price" type="number" class="form-control" id="price" placeholder="Enter the product price">      
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </div>

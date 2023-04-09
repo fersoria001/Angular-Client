@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
     password: ''
     }
   
-  constructor(private loginService: LoginService){}
+  constructor(private loginService: LoginService, private router: Router){}
 
   ngOnInit(): void{
 
@@ -39,9 +40,9 @@ export class LoginComponent {
 
       if(this.loginService.getUserRole() == "ADMIN")
       {
-        window.location.href = '=/admin';
+        this.router.navigate(['admin']);
       } else if (this.loginService.getUserRole() == "NORMAL") {
-        window.location.href = '=""';
+        this.router.navigate(['home']);
       } else {
         this.loginService.clientLogOut();
       }
