@@ -1,2 +1,14 @@
-<p>product-list works!</p>
-<p>{{data[0].nombre}}</p>
+
+<div class="container row ms-auto">
+    <div class="container col-3" *ngFor="let product of data">
+    <div class="card h-100" style="">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{product.brand}}{{product.model}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-text">{{product.price}}</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+</div>

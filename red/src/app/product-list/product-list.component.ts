@@ -11,9 +11,11 @@ export class ProductListComponent implements OnInit{
 
   data:any;
 
-  constructor(private productService: ProductsService, private router: Router){}
+  constructor(private productService: ProductsService, private router: Router){
+    
+  }
   ngOnInit():void {
-   this.showData();
+    this.showData();
   }
 
   showData(){

@@ -17,6 +17,10 @@ export class ProductsService {
     return this.http.get(`${this.baseUrl}/products`)
   }
 
+  public getProductById(id : number){
+    return this.http.get(`${this.baseUrl}/products/${id}`);
+  }
+
   public saveProduct(product: any){
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     return this.http.post(`${this.baseUrl}/admin/products`, product, {headers: headers});
